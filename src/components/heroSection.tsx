@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const hero = () => {
   const date = new Date().toLocaleDateString("bn-BD", {
@@ -23,9 +24,9 @@ const hero = () => {
             বিস্তারিত, গড়, সর্বনিম্ন-সর্বোচ্চ এবং দামের পরিবর্তন এক জায়গায়।
           </p>
 
-          <button className="btn bg-green-700 text-white border-none hover:bg-green-800">
+         <Link href="/src/components/allProdeucts.tsx"> <button  className="btn bg-green-700 text-white border-none hover:bg-green-800">
             সব পণ্য দেখুন
-          </button>
+          </button></Link>
         </div>
 
         <div className="w-1/2 flex justify-center">
