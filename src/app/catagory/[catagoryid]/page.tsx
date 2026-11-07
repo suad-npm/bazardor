@@ -1,3 +1,6 @@
+import Link from "next/link";
+
+
 interface CategoryProduct {
     id: number;
     nameBn: string;
@@ -17,6 +20,8 @@ const catagoryNews = async ({ params }: { params: Promise<{ catagoryid: string }
     const data: CategoryProduct[] = await res.json();
 
     return (
+
+        
         <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 my-8">
 
            
@@ -63,6 +68,7 @@ const catagoryNews = async ({ params }: { params: Promise<{ catagoryid: string }
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
 
                 {data.map(h => (
+                    <Link key={h.id}  href={`/productDetails/${h.id}`}>
                     <div
                         key={h.id}
                         className="bg-[#f9fcfa] border border-gray-200 rounded-2xl p-4 sm:p-5"
@@ -105,11 +111,14 @@ const catagoryNews = async ({ params }: { params: Promise<{ catagoryid: string }
                         </div>
 
                     </div>
+                    </Link>
+
                 ))}
 
             </div>
 
         </div>
+        
     );
 };
 

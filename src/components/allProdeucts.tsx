@@ -42,7 +42,7 @@ const allProducts = async () => {
                 {data.map(h => (
                     <Link
                         key={h.id}
-                        href={`/products/${h.slug}`}
+                        href={`/productDetails/${h.id}`}
                         className="bg-[#f9fcfa] border border-gray-200 rounded-2xl p-4 sm:p-5 hover:shadow-md transition cursor-pointer"
                     >
 
