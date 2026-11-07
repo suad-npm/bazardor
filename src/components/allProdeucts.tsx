@@ -18,13 +18,13 @@ const allProducts = async () => {
     const data: ProductData[] = await res.json();
 
     return (
-        <div className="w-8/11 mx-auto my-10">
+        <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 my-10">
 
-            <h2 className="text-3xl font-bold mb-5">
+            <h2 className="text-2xl sm:text-3xl font-bold mb-5">
                 সব পণ্য
             </h2>
 
-            <div className="flex justify-between items-center mb-6">
+            <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3 mb-6">
                 <p className="text-gray-500">
                     মোট {data.length.toLocaleString("bn-BD")}টি পণ্য দেখানো হচ্ছে
                 </p>
@@ -37,22 +37,22 @@ const allProducts = async () => {
                 </div>
             </div>
 
-            <div className="grid grid-cols-3 gap-5">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
 
                 {data.map(h => (
                     <Link
                         key={h.id}
                         href={`/products/${h.slug}`}
-                        className="bg-[#f9fcfa] border border-gray-200 rounded-2xl p-5 hover:shadow-md transition cursor-pointer"
+                        className="bg-[#f9fcfa] border border-gray-200 rounded-2xl p-4 sm:p-5 hover:shadow-md transition cursor-pointer"
                     >
 
-                        <div className="flex items-center gap-4 mb-4">
-                            <div className="bg-[#f0f5f0] w-16 h-16 rounded-2xl flex items-center justify-center text-3xl">
+                        <div className="flex items-center gap-3 sm:gap-4 mb-4">
+                            <div className="bg-[#f0f5f0] w-14 h-14 sm:w-16 sm:h-16 shrink-0 rounded-2xl flex items-center justify-center text-3xl">
                                 {h.image}
                             </div>
 
-                            <div>
-                                <h3 className="text-xl font-bold">
+                            <div className="min-w-0">
+                                <h3 className="text-lg sm:text-xl font-bold">
                                     {h.nameBn}
                                 </h3>
 
@@ -62,19 +62,19 @@ const allProducts = async () => {
                             </div>
                         </div>
 
-                        <div className="flex justify-between items-end">
+                        <div className="flex justify-between items-end gap-2">
 
                             <div>
                                 <p className="text-gray-500">
                                     আজকের দাম
                                 </p>
 
-                                <p className="text-2xl font-bold">
+                                <p className="text-xl sm:text-2xl font-bold">
                                     {h.today} <span className="text-base font-normal">টাকা</span>
                                 </p>
                             </div>
 
-                            <span className={`rounded-full px-3 py-1 ${
+                            <span className={`rounded-full px-2 sm:px-3 py-1 text-sm whitespace-nowrap ${
                                 h.change.dir === "up"
                                     ? "bg-[#f0f5f0] text-red-500"
                                     : h.change.dir === "down"
