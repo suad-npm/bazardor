@@ -1,7 +1,10 @@
+import { connection } from "next/server";
 import Image from "next/image";
 import Link from "next/link";
 
-const hero = () => {
+const Hero = async () => {
+  await connection();
+
   const date = new Date().toLocaleDateString("bn-BD", {
     dateStyle: "full",
   });
@@ -24,7 +27,7 @@ const hero = () => {
             বিস্তারিত, গড়, সর্বনিম্ন-সর্বোচ্চ এবং দামের পরিবর্তন এক জায়গায়।
           </p>
 
-          <Link href="/src/components/allProdeucts.tsx">
+          <Link href="#all-products">
             <button className="btn bg-green-700 text-white border-none hover:bg-green-800">
               সব পণ্য দেখুন
             </button>
@@ -48,4 +51,4 @@ const hero = () => {
   );
 };
 
-export default hero;
+export default Hero;

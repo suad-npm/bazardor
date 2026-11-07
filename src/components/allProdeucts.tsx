@@ -12,18 +12,16 @@ interface ProductData {
         pct: number;
     };
 }
-
 const allProducts = async () => {
     const res = await fetch("https://openapi.programming-hero.com/api/bazardor/products");
     const data: ProductData[] = await res.json();
 
     return (
-        <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 my-10">
+        <div  id="all-products" className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 my-10  ">
 
             <h2 className="text-2xl sm:text-3xl font-bold mb-5">
                 সব পণ্য
             </h2>
-
             <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3 mb-6">
                 <p className="text-gray-500">
                     মোট {data.length.toLocaleString("bn-BD")}টি পণ্য দেখানো হচ্ছে
@@ -36,7 +34,6 @@ const allProducts = async () => {
                     </select>
                 </div>
             </div>
-
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
 
                 {data.map(h => (
