@@ -19,7 +19,7 @@ const marquee = async () => {
     console.log(data)
 
     return (
-        <div className="pt-2 mt-2 border-t border-black-100">
+        <div className="pt-2 mt-2 ">
             <MarqueeText direction="right" duration={12}>
                 {data.map(h => <span key={h.id}> 
                     <span>{h.image}</span>

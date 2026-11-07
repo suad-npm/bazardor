@@ -12,8 +12,10 @@ const navLink = async () => {
 
 
   return (
-    <div className="flex items-center w-8/11 mx-auto  gap-8">
+    <div className="border-b border-black-100 p-1">
+    <div className="flex items-center w-8/11 mx-auto  gap-8 ">
       {data.map((n, i) => ( <Link className="font-bold" key={i} href={n.slug}> {n.icon} {n.nameBn} </Link> ))}
+    </div>
     </div>
   );
 };
