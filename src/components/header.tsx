@@ -1,6 +1,7 @@
 import { connection } from "next/server";
 import Image from "next/image";
 import Link from "next/link";
+import UserInfo from "./userInfo";
 
 const Header = async () => {
     await connection();
@@ -36,15 +37,7 @@ const Header = async () => {
                 </div>
             </div>
 
-            <div className="flex items-center gap-3 sm:gap-4">
-                <button className="btn btn-sm sm:btn-md">
-                    <p className="font-bold">সাইন ইন</p>
-                </button>
-
-                <button className="btn btn-sm sm:btn-md bg-green-800">
-                    <p className="text-white">সাইন আপ</p>
-                </button>
-            </div>
+            <UserInfo/>
 
         </div>
     );

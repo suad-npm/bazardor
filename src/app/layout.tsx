@@ -6,6 +6,8 @@ import Header from "@/components/header";
 import NavLink from "@/components/navLink";
 import Footer from "@/components/footer";
 import Marquee from "@/components/marquee";
+import { Toaster } from "react-hot-toast";
+
 
 const notoSerifBengali = Noto_Serif_Bengali({
   
@@ -32,7 +34,11 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     <Header />
 </Suspense>
 
-        <NavLink/>
+<Suspense fallback={<div>Loading...</div>}>
+  <NavLink />
+</Suspense>
+
+        
        <Suspense fallback={<div className="h-10" />}>
     <Marquee />
 </Suspense>
@@ -40,6 +46,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
 
         {children}
         <Footer/>
+        <Toaster/>
 
        
 
