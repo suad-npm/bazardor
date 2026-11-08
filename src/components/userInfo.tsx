@@ -24,9 +24,9 @@ const handleSignOut = async()=>{
 
                     <Link href={"/profile"}>
                     <div className="avatar">
-  <div className="ring-primary ring-offset-base-100 w-10 rounded-full ring-2 ring-offset-2">
-    <img alt="Tailwind-CSS-Avatar-component" src={user?.image as string} />
-  </div>
+  <div className="w-10 h-10 rounded-full bg-green-700 flex items-center justify-center text-white text-xl font-semibold">
+  {user?.name?.charAt(0)?.toUpperCase() || "U"}
+</div>
 </div>
                     </Link>
 

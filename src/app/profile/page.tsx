@@ -15,7 +15,7 @@ const Profile = () => {
 
     useEffect(() => {
         if (user?.name) {
-            setName(user.name);
+            (user.name);
         }
     }, [user?.name]);
 

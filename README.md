@@ -1,36 +1,172 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🛒 BazarDor – বাজার দর
 
-## Getting Started
+### Know the Price. Compare the Market. Shop Smarter.
 
-First, run the development server:
+BazarDor is a modern online market price platform designed to help people in Bangladesh explore daily product prices, compare market rates, and stay informed about price changes.
+
+The platform provides an easy-to-use interface where users can browse products, explore categories, view product details, and manage their personal accounts.
+
+---
+
+## 🌐 Project Overview
+
+**BazarDor (বাজার দর)** aims to make market price information more accessible and convenient for everyday consumers in Bangladesh.
+
+Users can explore different products, check their prices, discover price increases and decreases, and manage their accounts through a simple and user-friendly interface.
+
+---
+
+## ✨ Features
+
+- **Product Listings:** Browse a collection of available market products.
+- **Category Navigation:** Explore products based on different categories.
+- **Product Details:** View detailed information about individual products.
+- **Price Marquee:** Display market price updates in a scrolling section.
+- **Top Risers & Fallers:** Discover products with increasing and decreasing prices.
+- **Product Sorting:** Sort products using available sorting options.
+- **User Authentication:** Register and sign in using email and password.
+- **User Profile:** View personal account information.
+- **Profile Update:** Update your account name.
+- **Secure Logout:** Sign out from your account.
+- **Responsive Design:** Access the platform on different screen sizes.
+
+---
+
+## 🛠️ Technologies Used
+
+### Frontend
+- Next.js
+- React
+- TypeScript
+- Tailwind CSS
+- DaisyUI
+
+### Authentication & Backend
+- Better Auth
+- MongoDB
+- MongoDB Atlas
+
+### Tools & Development
+- Git
+- GitHub
+- Visual Studio Code
+- npm
+
+---
+
+## 📦 Installation & Setup
+
+Follow these steps to run BazarDor on your local machine.
+
+### 1. Clone the Repository
+
+```bash
+git clone YOUR_GITHUB_REPOSITORY_URL
+```
+
+### 2. Navigate to the Project Folder
+
+```bash
+cd my-app
+```
+
+### 3. Install Dependencies
+
+```bash
+npm install
+```
+
+### 4. Configure Environment Variables
+
+Create a `.env` file in the root directory of the project.
+
+Add your MongoDB connection string:
+
+```env
+MONGODB_URL=your_mongodb_connection_string
+```
+
+Replace the placeholder with your own MongoDB Atlas connection string.
+
+**Important:** Never share or upload your `.env` file or database credentials to GitHub.
+
+### 5. Run the Development Server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 6. Open in Browser
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Visit:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```text
+http://localhost:3000
+```
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## 🔐 Authentication
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+BazarDor uses Better Auth for user authentication.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Authentication features include:
 
-## Deploy on Vercel
+- User Registration
+- Email and Password Login
+- User Session Management
+- Profile Information
+- Profile Name Update
+- Sign Out
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📁 Project Structure
+
+```text
+my-app/
+│
+├── public/
+│
+├── src/
+│   ├── app/
+│   │   ├── profile/
+│   │   ├── signIn/
+│   │   ├── signUp/
+│   │   ├── productDetails/
+│   │   └── ...
+│   │
+│   ├── components/
+│   └── lib/
+│
+├── .env
+├── .gitignore
+├── package.json
+├── next.config.ts
+└── README.md
+```
+
+---
+
+## 🔗 API
+
+Product and category information is fetched from the Programming Hero BazarDor API.
+
+- Products API: https://openapi.programming-hero.com/api/bazardor/products
+- Categories API: https://openapi.programming-hero.com/api/bazardor/categories
+
+---
+
+## 👨‍💻 Developer
+
+**Developed by Razit Ahmed Suad**
+
+- GitHub: https://github.com/Razit-Ahmed
+- Project: BazarDor
+
+---
+
+## 📄 License
+
+This project was developed for educational and learning purposes.
+
