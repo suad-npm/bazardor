@@ -3,12 +3,17 @@
 "use client"
 
 import { authClient } from "@/lib/auth-client";
+
+
+
 import { useEffect, useState } from "react";
 
 const Profile = () => {
 
     const { data: session } = authClient.useSession();
     const user = session?.user;
+
+
 
     const [name, setName] = useState("");
     const [loading, setLoading] = useState(false);
