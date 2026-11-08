@@ -161,7 +161,7 @@ Product and category information is fetched from the Programming Hero BazarDor A
 
 **Developed by Razit Ahmed Suad**
 
-- GitHub: https://github.com/Razit-Ahmed
+- GitHub Profile: https://github.com/suad-npm
 - Project: BazarDor
 
 ---
